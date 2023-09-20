@@ -1,0 +1,20 @@
+{% extends 'Appblog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; max-width: 600px; margin: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h4 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px;">Estudiantes registrados</h4>
+    <div style="margin-top: 20px;">
+    {% for n in value %}
+        <div style="color: #fff; background-color: #007bff; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+            <h6>Nombre: {{n.nombre}}</h6>
+            <h6>Apellido: {{n.apellido}}</h6>
+            <h6>Email: {{n.email}}</h6>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock contenidoQueCambia %}

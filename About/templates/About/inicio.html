@@ -1,0 +1,27 @@
+{% extends 'Appblog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<section class="testimonials text-center bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3" src= {% static 'About/assets/img/fran.jpg' %} alt="Franco Biancotti"/>
+                    <h5>Franco Biancotti</h5>
+                    <div class="mb-0 fst-italic">
+                    <p>
+                       <p>Ingeniero civil.</p>
+                       <p>Rosarino.</p>
+                       <p>En búsqueda de nuevos desafíos.</p>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock contenidoQueCambia %}

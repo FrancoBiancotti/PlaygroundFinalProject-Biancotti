@@ -1,0 +1,32 @@
+{% extends 'Appblog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if mi_formulario.errors %}
+
+<p style='color: red'> Los datos estan mal, verificar</p>
+
+{% endif %}
+
+<form action="/Appblog/cursos/"    method="post">{% csrf_token %}
+    <p></p>
+    <table>
+        {{mi_formulario.as_p}}
+    </table>
+    <p></p>
+    <input type = 'submit' value='Registrar'>
+</form>
+</body>
+</html>
+
+{% endblock contenidoQueCambia %}

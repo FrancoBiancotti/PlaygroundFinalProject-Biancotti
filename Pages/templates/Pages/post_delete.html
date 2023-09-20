@@ -1,0 +1,24 @@
+{% extends 'Appblog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<section class="bg-light">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <h1 class="post-title">Eliminar Post</h1>
+                    <p>¿Estás seguro de que deseas eliminar este post?</p>
+                    <form method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i> Eliminar Post</button>
+                    </form>
+                    <a class="btn btn-outline-primary btn-sm" href="{% url 'Posteos' %}"><i class="bi bi-arrow-left"></i> Volver al Detalle del Post</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contenidoQueCambia %}

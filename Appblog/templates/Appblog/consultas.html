@@ -1,0 +1,57 @@
+{% extends 'Appblog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Botones con Formato</title>
+    <style>
+        /* Estilos para los botones */
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container2">
+        <form action="/Appblog/consulta_cursos/" method="get">
+            <button class="boton">Cursos</button>
+        </form>
+        <form action="/Appblog/consulta_estudiantes/" method="get">
+            <button class="boton">Estudiantes</button>
+        </form>
+        <form action="/Appblog/consulta_profesores/" method="get">
+            <button class="boton">Profesores</button>
+        </form>
+        <form action="/Appblog/consulta_entregables/" method="get">
+            <button class="boton">Entregables</button>
+        </form>
+    </div>
+</body>
+</html>
+<style>
+    /* Estilos para centrar el contenedor */
+    .container2 {
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+    }
+</style>
+
+{% endblock contenidoQueCambia %}

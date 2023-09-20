@@ -1,0 +1,45 @@
+{% extends 'Appblog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{% if entregables %}
+
+<div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; max-width: 600px; margin: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h4 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px;">Datos del entregable {{nombre}}</h4>
+    <div style="margin-top: 20px;">
+    {% for n in entregables %}
+        <div style="color: #fff; background-color: #007bff; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+            <h6>Nombre: {{n.nombre}}</h6>
+            <h6>Fecha de entrega: {{n.fecha_entrega}}</h6>
+            <h6>Entregado:
+                {% if n.entregado %}
+                    <input type="checkbox" id="checkbox_entregado" name="entregado"checked>
+                {% else %}
+                    <input type="checkbox" id="checkbox_entregado" name="entregado"unchecked>
+                {% endif %}
+            </h6>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+    {% else %}
+    <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; max-width: 600px; margin: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+       <h4 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px;">No se encuentra el entregable {{nombre}}</h4>
+    </div>
+    
+    <p></p>
+    <style>
+        .mi-contenido {
+            text-align: center; /* Esto centra horizontalmente el contenido dentro del div */
+        }
+    </style>
+    <div class="mi-contenido">
+        <form action="" method="get">
+            <button class="boton">Volver</button>
+        </form>
+    </div>
+{% endif %}
+
+{% endblock contenidoQueCambia %}

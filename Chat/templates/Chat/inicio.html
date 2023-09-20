@@ -1,0 +1,20 @@
+{% extends 'Appblog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; max-width: 600px; margin: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h4 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px;">Usuarios registrados</h4>
+    <div style="margin-top: 20px;">
+    {% for n in value %}
+        <div style="color: #fff; background-color: #fff; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+            <a href={% url 'Chats_n' n.id %}>
+                <h6>Usuario {{n.id}}: {{n.username}}</h6>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock contenidoQueCambia %}

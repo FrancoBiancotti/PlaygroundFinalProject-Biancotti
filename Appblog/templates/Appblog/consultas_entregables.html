@@ -1,0 +1,28 @@
+{% extends 'Appblog/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<style>
+    /* Estilos para centrar el formulario */
+    .mi-contenido {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .mi-contenido form {
+        text-align: center;
+    }
+</style>
+
+<p></p>
+<div class="mi-contenido">
+    <form action="" method="GET">
+        <label for="entregable">Nombre entregable:</label>
+        <input type="char" id="nombre" name="entregable">
+        <button type="submit" value="Buscar">Buscar</button>
+    </form>
+</div>
+{% endblock contenidoQueCambia %}
